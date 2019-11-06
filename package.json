@@ -1,0 +1,57 @@
+{
+  "name": "@n_bryant/nb-material-theme",
+  "version": "1.0.0",
+  "homepage": "https://github.com/n-bryant/nb-material-theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n-bryant/nb-material-theme.git"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/theme.js",
+  "scripts": {
+    "build": "yarn lint && rm -rf dist && babel src/lib -d dist --ignore src/lib/*.test.js",
+    "commit": "commit",
+    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:sort-package-json",
+    "lint:eslint": "eslint . --cache --ext .js,.jsx --fix",
+    "lint:prettier": "prettier '**/*.{css,scss,sass,less,json,yml,yaml,html,md,mdx,vue,ts,tsx,gql,graphql}' --write",
+    "lint:sort-package-json": "sort-package-json",
+    "test": "./node_modules/.bin/jest"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@material-ui/core": "^3.9.2",
+    "lodash.merge": "^4.6.1",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.3.4",
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.3",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^2.6.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.5.0",
+    "prettier": "^1.13.6",
+    "sort-package-json": "^1.22.0"
+  },
+  "peerDependencies": {
+    "react": "^16.4.2"
+  },
+  "maintainers": [
+    {
+      "name": "Nicholas Bryant",
+      "email": "nbryant.developer@gmail.com"
+    }
+  ]
+}
